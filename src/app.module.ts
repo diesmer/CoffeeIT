@@ -1,18 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { NFTModule } from './nfts/nft.module';
-
 import { MongooseModule } from '@nestjs/mongoose';
+import { NftsModule } from './nfts/nfts.module';
 
 @Module({
   imports: [
-    NFTModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://root:PVRDf3oyTjl9nz2e@nft.gjdrk.mongodb.net/nodejs-test?retryWrites=true&w=majority',
-    ),
+    MongooseModule.forRoot('mongodb://localhost:27017/test'),
+    NftsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
