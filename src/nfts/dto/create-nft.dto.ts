@@ -1,5 +1,5 @@
 export class CreateNFTDto {
   readonly name: string;
-  readonly price: number;
+  readonly priceSOL: number;
   readonly hashcode: string;
 }

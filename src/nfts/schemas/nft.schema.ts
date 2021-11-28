@@ -9,7 +9,7 @@ export class Nft {
   name: string;
 
   @Prop()
-  price: number;
+  priceSOL: number;
 
   @Prop()
   hashcode: string;
